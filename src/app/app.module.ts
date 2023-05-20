@@ -8,18 +8,23 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { MatTableModule } from '@angular/material/table';
+import { EmployeesSliceComponent } from './employees-slice/employees-slice.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeesDeptnoComponent,
-    EmployeesGradesComponent
+    EmployeesGradesComponent,
+    EmployeesSliceComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    MatTableModule
+    MatTableModule,
+    Ng2SearchPipeModule
   ],
   exports: [
     RouterModule

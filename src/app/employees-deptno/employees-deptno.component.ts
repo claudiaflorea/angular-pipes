@@ -26,8 +26,6 @@ export class EmployeesDeptnoComponent implements OnInit {
 
   dataSource = new MatTableDataSource<EmployeeDetails>(ELEMENT_DATA).data;
   displayedColumns: string[] = ['number', 'name', 'job', 'deptno'];
-  deptnoList: string[] = ['All', 'Managers', 'Programmers', 'Testers'];
-
     
   ngOnInit() {
     this.dataSource = new MatTableDataSource<EmployeeDetails>(ELEMENT_DATA).data;
@@ -36,20 +34,21 @@ export class EmployeesDeptnoComponent implements OnInit {
   displayAll() {
     this.dataSource = new MatTableDataSource<EmployeeDetails>(ELEMENT_DATA).data;
   }
+
   displayManagers() {
     this.ngOnInit();
     this.dataSource = this.dataSource.filter(item => (item.deptno === 10));
   }
+
   displayDevs() {
     this.ngOnInit();
     this.dataSource = this.dataSource.filter(item => (item.deptno === 7));
   }
+  
   displayQA() {
     this.ngOnInit();
     this.dataSource = this.dataSource.filter(item => (item.deptno === 8));
   }
-
-
  
 }
 
